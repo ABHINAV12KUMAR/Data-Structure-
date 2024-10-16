@@ -1,0 +1,37 @@
+package LearnArray;
+import java.util.*;
+public class LinearSearch {
+	    public static int searchelementArr (int input[],int val){
+	    	int n= input.length;
+	        for(int i=0;i<n;i++){
+	            if(input[i]==val){
+	               return i;
+	            }
+	        }
+	        return -1;
+	    }
+	    public static int[] takeinput(){
+	        Scanner sc=new Scanner (System.in);
+	        int n=sc.nextInt();
+	        int input[]=new int [n];
+	        for (int i=0;i<n;i++){
+	            input[i]=sc.nextInt();
+	        }
+	        return input;
+	    }
+	    public static void printarr(int input[]){
+	        int n=input.length;
+	        for(int i=0;i<n;i++){
+	            System.out.println(input[i]);
+	        }
+	    }
+	    public static void main(String[] args) {
+	        
+	          int arr[]=takeinput();
+	          printarr(arr);
+	          int val=15;
+	          int linersearch=searchelementArr(arr,val);
+	          System.out.println("seraching no of :"+linersearch);
+	        }
+	}
+
