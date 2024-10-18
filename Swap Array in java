@@ -1,0 +1,41 @@
+package LearnArray;
+
+import java.util.Scanner;
+
+public class SwapArr {
+	 public static int[] takeinput() {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter the size");
+	        int n = sc.nextInt();
+	        int input[] = new int[n];
+	        for (int i = 0; i < n; i++) {
+	            input[i] = sc.nextInt();
+	        }
+	        return input;
+	    }
+
+	    static void printArr(int input[]) {
+	        int n = input.length;
+	        for (int i = 0; i < n; i++) {
+	            System.out.println(input[i]);
+	        }
+	    }
+
+	    static int[] swapArr(int input[]) {
+	        int n = input.length;
+	        for (int i = 0; i < n - 1; i += 2) {
+	            int temp = input[i];
+	            input[i] = input[i + 1];
+	            input[i + 1] = temp;
+	        }
+	        return input;  // Returning the modified array
+	    }
+
+	    public static void main(String[] args) {
+	        int arr[] = takeinput();
+	        arr = swapArr(arr);  // Calling swapArr before printing
+	        printArr(arr);
+	    }
+	
+
+}
